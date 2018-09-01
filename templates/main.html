@@ -1,0 +1,58 @@
+<!Doctype html>
+<html>
+    <head>
+        <!-- Stuff from here till "title" is Bootstrap framework -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+            integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+            crossorigin="anonymous">
+        <title>Blog</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">My scratchpad</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div class= row>
+                <strong>
+                    Enter a comment in the box and press "Post Comment".
+                    The comment will be stored in an SQLAlchemy database and stay
+                    there forever.
+                </strong>
+            </div>
+
+            <!-- for loop -->
+            {% for comment in comments %}
+                <div class="row">
+                    {{ comment.content }}
+                </div>
+                <br>
+            {% endfor %}
+
+
+            <div class="row">
+                <form action="http://bhaley7.pythonanywhere.com/blog" method="POST">
+                    <textarea name="contents" class="form-control" placeholder="Enter a comment: "></textarea>
+                    <input type="submit" class="btn btn-success" value="Post comment">
+                </form>
+            </div>
+        </div> <!-- From class="container" -->
+
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+
+    <body align="center">
+        <!-- Want to place hacker picture here -->
+        <!-- It will be to the left of my name -->
+        <a href='http://www.catb.org/hacker-emblem/'>
+            <img src='http://www.catb.org/hacker-emblem/glider.png' alt='hacker emblem' style="float: right; right: 50%;"/>
+        </a>
+        <h1 align="left">Ben P. Haley</h1>
+        <header>Home to the webpage!</header>
+        <a href="http://bhaley7.pythonanywhere.com/blog" title="blog">Blog</a>
+        <!--{% if error %}-->
+        <!--  <h1>{{ name }}!</h1>-->
+        <!--{% endif %}-->
+        <div>
+            <form action="http//bhaley7.pythonanywhere.com/authorize" method="POST">
+                <fieldset>
+                    <legend>Sign-In</legend>
+                    Username: <br> <input type="text" name="username"> <br>
+                    Password: <br> <input type="password" name="password"> <br>
+                    <input type="submit" value="Sign-in">
+                    <!--<button action="bhaley7.pythonanywhere.com/register">Register</button>-->
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
